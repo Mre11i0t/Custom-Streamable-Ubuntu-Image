@@ -149,7 +149,7 @@ function start_audio_in (){
 function start_upload (){
 	if [[ ${KASM_SVC_UPLOADS:-1} == 1 ]]; then
 		echo 'Starting upload server'
-		$STARTUPDIR/upload_server/kasm_upload_server --ssl --auth-token "kasm_user:$VNC_PW" &
+		$STARTUPDIR/upload_server/kasm_upload_server --auth-token "kasm_user:$VNC_PW" &
 
 		KASM_PROCS['upload_server']=$!
 
